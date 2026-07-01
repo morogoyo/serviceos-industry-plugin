@@ -1,0 +1,7 @@
+/**
+ * Industry Plugin — Custom Styles
+ *
+ * Inherits all CRM CSS variables from dashboard.css:
+ *   --primary, --surface, --on-surface, --card-bg, --border-light, etc.
+ * Add industry-specific overrides below.
+ */
