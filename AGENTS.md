@@ -22,6 +22,9 @@ serviceos-industry-plugin        ← THIS REPO — skeleton template (no industr
 
 ```bash
 gh repo fork morogoyo/serviceos-industry-plugin --clone
+cd serviceos-industry-plugin
+gh repo rename serviceos-industry-{industry}
+cd ..
 mv serviceos-industry-plugin serviceos-industry-{industry}
 cd serviceos-industry-{industry}
 ```
@@ -34,7 +37,6 @@ Then customize:
 5. **`assets/js/module.js`** — industry-specific JavaScript
 
 ```bash
-git remote set-url origin git@github.com:morogoyo/serviceos-industry-{industry}.git
 git add -A && git commit -m "Customize for {industry} industry"
 git push -u origin main
 ```
