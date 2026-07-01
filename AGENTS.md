@@ -4,29 +4,30 @@
 
 A skeleton WordPress plugin template for creating industry-specific modules that integrate with the [ServiceOS CRM](https://github.com/morogoyo/wp_crm_general). The `main` branch is the pristine skeleton. Each industry gets its own fork.
 
-## Fork-Based Workflow (MANDATORY)
+## Template-Based Workflow (MANDATORY)
 
-**NEVER commit industry-specific code to `main` in this repo.** Industry work happens in forks.
+**NEVER commit industry-specific code to `main` in this repo.** Industry work happens in template copies.
+
+### What This Repo Is
+
+A skeleton WordPress plugin template for creating industry-specific modules that integrate with the [ServiceOS CRM](https://github.com/morogoyo/wp_crm_general). The `main` branch is the pristine skeleton. Each industry gets its own repo created from this template.
 
 ### Repo Structure
 
 ```
 serviceos-industry-plugin        ← THIS REPO — skeleton template (no industry code)
     │
-    ├── serviceos-industry-hvac        ← fork for HVAC industry
-    ├── serviceos-industry-plumbing    ← fork for Plumbing industry
-    └── serviceos-industry-electrical  ← fork for Electrical industry
+    ├── serviceos-industry-hvac        ← template copy for HVAC industry
+    ├── serviceos-industry-plumbing    ← template copy for Plumbing industry
+    └── serviceos-industry-electrical  ← template copy for Electrical industry
 ```
 
 ### Creating a New Industry Plugin
 
 ```bash
-gh repo fork morogoyo/serviceos-industry-plugin --clone
-cd serviceos-industry-plugin
-gh repo rename serviceos-industry-{industry}
-cd ..
-mv serviceos-industry-plugin serviceos-industry-{industry}
+gh repo create morogoyo/serviceos-industry-{industry} --public --template morogoyo/serviceos-industry-plugin --clone
 cd serviceos-industry-{industry}
+git remote add upstream https://github.com/morogoyo/serviceos-industry-plugin.git
 ```
 
 Then customize:
